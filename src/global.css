@@ -1,0 +1,22 @@
+/* scrollbar */
+@import 'simplebar-react/dist/simplebar.min.css';
+
+.card-box:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  content: '';
+}
+
+.card-box {
+  position: relative;
+}
+
+.card-box img,
+.card-box h6 {
+  position: relative;
+  z-index: 1;
+}
