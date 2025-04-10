@@ -14,7 +14,7 @@ export const login = createAsyncThunk('users/login', async (data) => {
 
 export const UserRegister = createAsyncThunk('users/register', async () => {
   try {
-    const response = await api.Users.getuserList();
+    const response = await api.Users.register();
     return response.data;
   } catch (error) {
     return error;
@@ -23,7 +23,7 @@ export const UserRegister = createAsyncThunk('users/register', async () => {
 
 export const VerifyUsers = createAsyncThunk('users/verifyOtp', async (data) => {
   try {
-    const response = await api.Users.removeUser(data);
+    const response = await api.Users.verifyOTP(data);
 
     return response.data;
   } catch (error) {

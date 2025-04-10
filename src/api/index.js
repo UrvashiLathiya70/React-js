@@ -3,22 +3,28 @@ import client, { METHODS } from './client';
 
 export const api = {
   Users: {
-    register: (params) =>
+    login: (params) =>
       client({
-        url: '/registration',
+        url: "/api/login",
         data: params,
         method: METHODS.POST,
       }),
-      verifyOtp: (params) =>
-        client({
-          url: '/verifyotp',
-          data: params,
-          method: METHODS.POST,
-        }),
-   
-    login: (params) =>
+    register: (params) =>
       client({
-        url: '/api/login',
+        url: "/api/registration",
+        data: params,
+        method: METHODS.POST,
+      }),
+    verifyOTP: (params) =>
+      client({
+        url: "/api/verifyotp",
+        data: params,
+        method: METHODS.PATCH,
+      }),
+
+    verifyPasswordOTP: (params) =>
+      client({
+        url: "/api/verifypasswordupdate",
         data: params,
         method: METHODS.POST,
       }),
